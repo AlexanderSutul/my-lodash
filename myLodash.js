@@ -67,6 +67,13 @@ const _ = (function () {
       if (!array.length) return undefined;
       return array[array.length - 1];
     },
+    indexOf(array, value, fromIndex = 0) {
+      if (!value || fromIndex > array.length) return undefined;
+      for (let i = fromIndex; i < array.length; i++) {
+        if (array[i] === value) return i;
+      }
+      return -1;
+    },
   };
 }());
 

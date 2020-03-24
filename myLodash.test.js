@@ -71,4 +71,17 @@ describe('tests for testing my own lodash', () => {
     const last2 = _.last([]);
     expect(last2).toBeUndefined();
   });
+  it('indexOf method test', () => {
+    const index = _.indexOf([1, 2, 1, 2], 2);
+    expect(index).toEqual(1);
+
+    const index2 = _.indexOf([1, 2, 1, 2], 2, 2);
+    expect(index2).toEqual(3);
+
+    const index3 = _.indexOf([1, 2, 1, 2], 5);
+    expect(index3).toEqual(-1);
+
+    const index4 = _.indexOf([1, 2, 3, 4, 5], 0, 15);
+    expect(index4).toBeUndefined();
+  });
 });
