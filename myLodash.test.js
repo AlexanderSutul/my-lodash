@@ -64,4 +64,11 @@ describe('tests for testing my own lodash', () => {
     const headed2 = _.head([]);
     expect(headed2).toBeUndefined();
   });
+  it('last method test', () => {
+    const last = _.last([1, 2, 3]);
+    expect(last).toEqual(3);
+
+    const last2 = _.last([]);
+    expect(last2).toBeUndefined();
+  });
 });

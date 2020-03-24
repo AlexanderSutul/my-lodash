@@ -63,6 +63,10 @@ const _ = (function () {
       if (!array.length) return undefined;
       return array[0];
     },
+    last(array) {
+      if (!array.length) return undefined;
+      return array[array.length - 1];
+    },
   };
 }());
 
