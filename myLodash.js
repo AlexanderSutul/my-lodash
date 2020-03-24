@@ -51,6 +51,18 @@ const _ = (function () {
       }
       return res;
     },
+    dropRight(array, n = 1) {
+      if (n > array.length || !array.length) return [];
+      const res = [];
+      for (let i = array.length - 1 - n; i >= 0; i--) {
+        res.unshift(array[i]);
+      }
+      return res;
+    },
+    head(array) {
+      if (!array.length) return undefined;
+      return array[0];
+    },
   };
 }());
 

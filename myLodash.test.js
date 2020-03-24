@@ -44,4 +44,25 @@ describe('tests for testing my own lodash', () => {
     const dropped5 = _.drop([]);
     expect(dropped5).toEqual([]);
   });
+  it('dropRight method test', () => {
+    const dropped1 = _.dropRight([1, 2, 3]);
+    expect(dropped1).toEqual([1, 2]);
+
+    const dropped2 = _.dropRight([1, 2, 3], 2);
+    expect(dropped2).toEqual([1]);
+
+    const dropped3 = _.dropRight([1, 2, 3], 5);
+    expect(dropped3).toEqual([]);
+
+    const dropped4 = _.dropRight([1, 2, 3], 0);
+    expect(dropped4).toEqual([1, 2, 3]);
+  });
+  it('head method test', () => {
+    const headed = _.head([1, 2, 3]);
+    expect(headed).toEqual(1);
+
+    const headed2 = _.head([]);
+    expect(headed2).toBeUndefined();
+
+  });
 });
