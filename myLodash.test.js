@@ -63,6 +63,5 @@ describe('tests for testing my own lodash', () => {
 
     const headed2 = _.head([]);
     expect(headed2).toBeUndefined();
-
   });
 });
